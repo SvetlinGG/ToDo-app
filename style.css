@@ -39,3 +39,19 @@ body{
     padding: 32px;
     color: var(--text-main);
 }
+.todo-header{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.todo-date {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.todo-count{
+    font-size: 13px;
+    color: var(--text-muted);
+}
