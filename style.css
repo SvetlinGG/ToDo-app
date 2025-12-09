@@ -1,0 +1,26 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --card-bg: #ffffff;
+    --card-radius: 24px;
+    --card-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+    
+    --text-main: #1f2933;
+    --text-muted: #8a9aa9;
+
+    --accent: #4f46e5;
+    --accent-soft: #e0e7ff;
+    --accent-muted: #e5ebff;
+
+    --task-done-bg: #e9fdf2;
+    --task-border: #e5e7eb;
+
+    --completed-text: #9ca3af;
+    --check-green: #16a34a;
+}
+
