@@ -55,3 +55,30 @@ body{
     font-size: 13px;
     color: var(--text-muted);
 }
+
+.filters {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+.filter-btn{
+    border: none;
+    background: none;
+    padding: 6px 10px;
+    border-radius: 9px;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 13px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.filter-btn.active {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+}
+.filter-btn:hover {
+    background: var(--accent-muted);
+    color: var(--accent);
+}
