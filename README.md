@@ -1,2 +1,2 @@
 # ToDo-app
-vanillaCSS, vanilla JS, Local storage, View Transitions
+vanillaCSS, vanilla JS, localStorage, ViewTransitions
