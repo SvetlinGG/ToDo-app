@@ -78,5 +78,18 @@ function render(){
     taskCountEl.textContent = tasks.length;
 }
 
+function renderWithTransition(){
+    if( !document.startViewTransition ){
+        render();
+
+        return;
+    }
+    document.startViewTransition(()=> {
+        render();
+    });
+}
+
+
+
 
 setTodayDate();
