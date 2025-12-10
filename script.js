@@ -118,5 +118,16 @@ function changeFilter(filter){
     renderWithTransition();
 }
 
+newTaskForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    addTask(newTaskInput.value);
+});
+
+filterButtons.forEach((btn) => {
+    btn,addEventListener("click", () => {
+        changeFilter(btn.dataset.filter);
+    });
+});
+
 
 setTodayDate();
