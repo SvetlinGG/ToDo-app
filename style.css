@@ -97,7 +97,7 @@ body{
     color: var(--text-main);
 }
 .new-task-form{
-    margin-bottom: 24px;
+    margin-bottom: 0;
 }
 .new-task-input{
     width: 100%;
