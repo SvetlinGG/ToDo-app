@@ -107,3 +107,34 @@ body{
     background-color: #ffffff;
     box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.15);
 }
+
+.task-list{
+    list-style: none;
+    margin-top: 6px;
+}
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 4px;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+.task + .task{
+    border-top: 1px solid #f3f4f6;
+}
+.task.completed {
+    background-color: var(--task-done-bg);
+}
+.task-main{
+    flex: 1;
+    font-size: 14px;
+    color: var(--text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.task.completed .task-main{
+    color: var(--completed-text);
+    text-decoration: line-through;
+}
