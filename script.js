@@ -29,3 +29,6 @@ function setTodayDate(){
         'date-display'
     ).textContent = `${weekday} ${month} ${day} ${year}`;
 }
+
+
+setTodayDate();
