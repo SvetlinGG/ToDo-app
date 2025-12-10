@@ -89,7 +89,34 @@ function renderWithTransition(){
     });
 }
 
+function addTask(text){
+    const trimmed = text.trim();
+    if ( !trimmed) return;
+    tasks.push({
+        id: Date.now().toString(),
+        text: trimmed,
+        completed: false,
+    });
+    saveTasks();
+    newTaskInput.value = "";
+    renderWithTransition();
+}
 
+function toggleTask(id){
+    const task = tasks.find((t) => t.id === id);
+    if (!task) return;
+    task.completed = !task.completed;
+    saveTasks();
+    renderWithTransition();
+}
+
+function changeFilter(filter){
+    currentFilter = filter;
+    filterButtons.forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.filter === filter);
+    });
+    renderWithTransition();
+}
 
 
 setTodayDate();
