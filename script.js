@@ -129,5 +129,6 @@ filterButtons.forEach((btn) => {
     });
 });
 
-
+loadTask();
 setTodayDate();
+render();
