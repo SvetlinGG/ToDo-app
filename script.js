@@ -41,5 +41,42 @@ function getFilteredTasks(){
     return tasks;
 }
 
+function render(){
+    taskListEl.innerHTML = "";
+
+    const visibleTasks = getFilteredTasks();
+
+    visibleTasks.forEach((task) => {
+        const li = document.createElement('li');
+        li.className = 'task' + (task.completed ? " completed" : "");
+        li.dataset.id = task.id;
+
+        const checkboxBtn = document.createElement('button');
+        checkboxBtn.className = "task-checkbox";
+        checkboxBtn.type = "button";
+        checkboxBtn.setAttribute(
+            "aria-label",
+            task.completed ? "Mark as active" : "Mark as completed"
+        );
+
+        const inner = document.createElement('span');
+        inner.className = "task-checkbox-inner";
+        inner.textContent = "✓";
+        checkboxBtn.appendChild(inner);
+
+        const text = document.createElement('div');
+        text.className = "task-main";
+        text.textContent = task.text;
+
+        checkboxBtn.addEventListener("click", () => toggleTask(task.id));
+
+        li.appendChild(checkboxBtn);
+        li.appendChild(text);
+        taskListEl.appendChild(li);
+    });
+
+    taskCountEl.textContent = tasks.length;
+}
+
 
 setTodayDate();
