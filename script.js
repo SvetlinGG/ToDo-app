@@ -30,5 +30,16 @@ function setTodayDate(){
     ).textContent = `${weekday} ${month} ${day} ${year}`;
 }
 
+function getFilteredTasks(){
+
+    if( currentFilter === 'active'){
+        return tasks.filter((t) => !t.completed);
+    }
+    if ( currentFilter === 'completed'){
+        return tasks.filter((t) => t.completed);
+    }
+    return tasks;
+}
+
 
 setTodayDate();
