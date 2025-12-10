@@ -16,7 +16,7 @@ function loadTask(){
 }
 
 function saveTasks(){
-    localStorage.getItem(STORAGE_KEY, JSON.stringify(tasks));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
 }
 
 function setTodayDate(){
@@ -124,7 +124,7 @@ newTaskForm.addEventListener("submit", (e) => {
 });
 
 filterButtons.forEach((btn) => {
-    btn,addEventListener("click", () => {
+    btn.addEventListener("click", () => {
         changeFilter(btn.dataset.filter);
     });
 });
